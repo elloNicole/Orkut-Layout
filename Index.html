@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1 id="titulo">Algoritmo que lê um número, e se for maior que vinte imprime sua metade</h1><br>
+<div class="td">
+    <h1>Soma</h1>
+    <form>
+          <input type="text" placeholder="valor 1" class="inTxt" id="inTxt"><br><br>  
+          <input type="submit" value="envio" class="btn" id="btn">
+
+    </form><br><br><br><br>
+    
+   <h2></h2>
+</div>
+
+<div class="navegacao">
+    <a href="senha.html">Verificação da senha</a>
+</div>
+     <script>
+        const frm = document.querySelector("form");
+        const resp = document.querySelector("h2");
+
+        
+       frm.addEventListener("submit" , (e) => {
+        e.preventDefault();//
+
+        var valor1=parseFloat(frm.inTxt.value);  
+            
+            if (valor1>20){
+                let divisao=(valor1/2);
+                resp.innerText = divisao;
+            }
+            else{
+                resp.innerText = "Esse numero é igual ou menor que 20";
+            }
+        
+        });
+   
+     </script>   
+
+</body>
+</html>
